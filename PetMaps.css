@@ -1,3 +1,7 @@
+* {
+font-family: 'Boogaloo', cursive;
+}
+
 #map {
     height: 400px;
     width: 50%;
@@ -9,17 +13,140 @@
   width: 50%;
   float: right;
   overflow: auto;
+}
 
+#animal-results {
+   background-color: white;
+   display: inline-block;
+   width: 100%;
+}
+
+h3:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+h3 {
+  font-size: 25px;
+  text-align: center;
 }
 
 
-h1 {
+#js-query {
+    font-size: 25px;
+    height: 50px;
+    width: 400px;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+#error {
+  color: red;
+}
+
+select {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    height: 50px;
+    width: 100px;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-color: lightgreen;
+}
+
+#search-button {
+    font-size: 20px;
+    height: 50px;
+    width: 100px;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 15px;
+     background-color: lightgreen;    
+}
+
+@media only screen and (min-width: 768px)  { 
+  select {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    height: 50px;
+    width: 80px;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 15px;
+    background-color: lightgreen;
+  }
+ }
+
+@media only screen and (max-width: 414px){
+select {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    height: 30px;
+    width: 50px;
+    border-width: 1px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+  }
+  
+.labels {
+  font-size: 25px;
+  text-shadow: 1px 1px  #D3D3D3;
+}
+
+  #js-query {
+    font-size: 25px;
+    height: 40px;
+    width: 300px;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+#map {
+  display: block;
+    height: 250px;
+    width: 100%;
+}
+
+#animal-results {
+   background-color: white;
+   display: block;
+   width: 100%;
+}
+
+#animal-data {
+  height: 250px;
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+  }
+
+#name-of-app {
+  text-shadow: 4px 4px  #999900;
   text-align: center;
   font-size: 50px;
-  font-family: 'Boogaloo', cursive;
   margin-bottom: 0;
   padding-bottom: 0;
- // color: white;
+  color: white;
+}
+
+#first-heading {
+   text-align: center;
+  font-size: 20px;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 #content {
@@ -27,32 +154,91 @@ h1 {
 }
 
 #popup-box {
-  height: 50px;
+  height: 100px;
+}
+
+#first-description {
+  margin-top: 5px;
+  margin-bottom: 160px;
 }
 
 #first-description, #description-paragraph2 {
   text-align: center;
-  font-family: 'Boogaloo', cursive;
-  font-size: 25px;
+  font-size: 30px;
+}
+
+#description-paragraph2 {
+text-shadow: 3px 3px  #D3D3D3;
+}
+
+#first-sentence {
+  text-align: center;
+  font-size: 50px;
+  text-shadow: 4px 4px  #ffffff;
+}
+
+label {
+  font-size: 35px;
+  text-shadow: 3px 3px  #D3D3D3;
 }
 
 
-
-#greeting-picture {
- display: block;
-  border-radius: 15px;
+#get-started {
+  display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 450px;
-    height: 300px;
+    font-size: 40px;
+    height: 150px;
+    width: 200px;
+    border-width: 5px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-_almLT0WWEU00Lqdx4UGIdw_8JLP2OAaFRBp4s4bEgSN0sM");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-#dog-pics {
+
+
+#infoWindow-pics {
+  height: 100px;
+  width: 100px;
+}
+
+#animal-pics {
   display: block;
   border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
-    width: 300px;
+    width: 200px;
     height: 200px;
 }
 
+html,body { height:100%; }
+
+
+
+html {
+  background-image: url("https://www.kimballstock.com/pix/DOK/05/DOK-05-RK0011-04P.JPG");
+      -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  }
+
+#green-header {
+  display: block;
+  align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0px;
+  border: purple;
+  border-width: 5px;
+  //background-color: #00EF7F;
+  background-color:  #009900;
+}
