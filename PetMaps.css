@@ -1,17 +1,19 @@
 * {
-font-family: 'Boogaloo', cursive;
+font-family: sans-serif;
 }
 
 #map {
     height: 400px;
-    width: 50%;
-    float: left;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #animal-data {
   height: 400px;
-  width: 50%;
-  float: right;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   overflow: auto;
 }
 
@@ -27,7 +29,7 @@ h3:hover {
 }
 
 h3 {
-  font-size: 25px;
+  font-size: 40px;
   text-align: center;
 }
 
@@ -60,9 +62,9 @@ select {
 }
 
 #search-button {
+    display: inline;
     font-size: 20px;
     height: 50px;
-    width: 100px;
     border-width: 2px;
     border-color: #000000;
     border-radius: 15px;
@@ -84,7 +86,37 @@ select {
   }
  }
 
-@media only screen and (max-width: 414px){
+ @media only screen and (max-width: 320px) {
+.labels {
+  font-size: 25px;
+  text-shadow: 1px 1px  #D3D3D3;
+}
+
+#js-query {
+    font-size: 25px;
+    height: 50px;
+    width: 320px;
+    border-width: 2px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+select {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 15px;
+    height: 25px;
+    width: 45px;
+    border-width: 1px;
+    border-color: #000000;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    background-color: lightgreen;
+  }
+ }
+
+@media only screen and (max-width: 414px) and (min-width: 321px){
 select {
     margin-left: auto;
     margin-right: auto;
@@ -99,7 +131,7 @@ select {
   }
   
 .labels {
-  font-size: 25px;
+  font-size: 35px;
   text-shadow: 1px 1px  #D3D3D3;
 }
 
@@ -111,6 +143,10 @@ select {
     border-color: #000000;
     border-radius: 15px;
     margin-bottom: 30px;
+}
+
+#first-sentence {
+  font-size: 10px;
 }
 
 #map {
@@ -133,17 +169,8 @@ select {
 }
   }
 
-#name-of-app {
-  text-shadow: 4px 4px  #999900;
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  color: white;
-}
-
 #first-heading {
-   text-align: center;
+  text-align: center;
   font-size: 20px;
   margin-bottom: 0;
   padding-bottom: 0;
@@ -160,26 +187,27 @@ select {
 #first-description {
   margin-top: 5px;
   margin-bottom: 160px;
+  font-size: 40px;
+  font-family: Boogaloo;
 }
 
 #first-description, #description-paragraph2 {
   text-align: center;
-  font-size: 30px;
 }
 
 #description-paragraph2 {
-text-shadow: 3px 3px  #D3D3D3;
+font-size: 30px;
+font-family: sans-serif
 }
 
 #first-sentence {
   text-align: center;
-  font-size: 50px;
-  text-shadow: 4px 4px  #ffffff;
+  font-size: 40px;
+  font-family: sans-serif
 }
 
 label {
-  font-size: 35px;
-  text-shadow: 3px 3px  #D3D3D3;
+  font-size: 30px;
 }
 
 
@@ -194,7 +222,8 @@ label {
     border-color: #000000;
     border-radius: 15px;
     margin-bottom: 30px;
-    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-_almLT0WWEU00Lqdx4UGIdw_8JLP2OAaFRBp4s4bEgSN0sM");
+    background-color: #f9b680;
+background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23e18861' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -218,27 +247,33 @@ label {
 
 html,body { height:100%; }
 
-
-
 html {
-  background-image: url("https://www.kimballstock.com/pix/DOK/05/DOK-05-RK0011-04P.JPG");
-      -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
+background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-_almLT0WWEU00Lqdx4UGIdw_8JLP2OAaFRBp4s4bEgSN0sM");
   }
+
+#name-of-app {
+  font-family: Boogaloo;
+  text-shadow: 4px 4px  #999900;
+  text-align: center;
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  color: whitesmoke;
+  width: 100%;
+}
 
 #green-header {
   display: block;
   align: center;
-  width: 50%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 0px;
   border: purple;
   border-width: 5px;
-  //background-color: #00EF7F;
   background-color:  #009900;
+}
+
+p {
+ font-size: 25px;
 }

@@ -19,34 +19,34 @@ function searchPage () {
 </iframe aria-live="assertive" title="Area to search animals">
   <html lang="en">
     <main role="main">
-      <p id="description-paragraph2">Enter search criteria and the location you would like to search below:</p>
+      <p id="description-paragraph2"><b>Enter search criteria and the location you would like to search below:</b></p>
         <form action="#" id="js-search-form">
-          <label class="labels" for="animal-type">Animal:</label>
+          <label class="labels" for="animal-type"><b>Animal:</b></label>
             <select id="animal-type" aria-live="assertive">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
-          <label class="labels" for="age">Age:</label>
+          <label class="labels" for="age"><b>Age:</b></label>
             <select aria-live="assertive" id="age">
               <option value="Baby">Baby</option>
               <option value="Young">Young</option>
               <option value="Adult">Adult</option>
               <option value="Senior">Senior</option>
             </select>
-          <label class="labels" for="B-or-S">Size:</label>
+          <label class="labels" for="B-or-S"><b>Size:</b></label>
             <select aria-live="assertive" id="B-or-S">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra-Large</option>
             </select>
-          <label class="labels" for="M-or-F">Sex:</label>
+          <label class="labels" for="M-or-F"><b>Sex:</b></label>
             <select aria-live="assertive" id="M-or-F">
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>
             <br>
-          <label class="labels" for="js-query">Search City Here:</label>
+          <label class="labels" for="js-query"><b>Search City Here:</b></label>
             <input type="text" id="js-query" class="controls" name="search" aria-label="search-here" placeholder="Enter city here">
               <button id="search-button" type="submit">Find Animals</button>
               <br>
@@ -202,6 +202,7 @@ function getPetFinderAPI (queryT) {
       dataType: `jsonp`,
       type: `GET`,
       success: function (data){
+        console.log(data);
         var resultsHTML = "";
         for (var i=0; i < data.petfinder.pets.pet.length; i++){
           var eachPet = data.petfinder.pets.pet[i];
