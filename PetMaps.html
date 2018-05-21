@@ -12,20 +12,17 @@
   <body>
     <header role="banner">
       <div id="green-header">
-    <h1>Pet Maps!</h1>
+    <h1 id="name-of-app">Pet Maps!</h1>
     </div>
     </header>
+    <main aria-live="assertive" role="main">
     <div id="next-page">
     <h2 id="first-description">Find Your Future Pet Here</h2>
-    <main role="main" aria-live="assertive">
-    <p id="first-description">Use this interactive App to generate a map of adoptable pets near you!</p>
+    <p id="first-sentence">Use this interactive App to generate a map of adoptable pets near you!</p>
     <button id="get-started">Get Started!</button>
-    </main>
-    <img src="https://www.kimballstock.com/pix/DOK/05/DOK-05-RK0011-04P.JPG" alt="image of dogs and cats" id="greeting-picture">
-    
     </div>
-    
+    </main>
    <script src="PetMaps.js" type="text/javascript"></script>
-     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNatdsn2CAp-FdRNK0k13dKq33PyD4mWI&libraries=places&callback=initAutocomplete"></script>
+     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNatdsn2CAp-FdRNK0k13dKq33PyD4mWI&libraries=places&callback=initAutocomplete&language=en"></script>
   </body>
 </html>
