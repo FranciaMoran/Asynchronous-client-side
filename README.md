@@ -15,4 +15,3 @@ This page is where the user can search a city and certain criteria to generate a
 
 The final product may be viewed here:
 https://apicapstone--franciamoran.repl.co/
-
