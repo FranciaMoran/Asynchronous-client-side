@@ -21,32 +21,32 @@ function searchPage () {
     <main role="main">
       <p id="description-paragraph2"><b>Enter search criteria and the location you would like to search below:</b></p>
         <form action="#" id="js-search-form">
-          <label class="labels" for="animal-type"><b>Animal:</b></label>
+          <label id="labels" for="animal-type"><b>Animal:</b></label>
             <select id="animal-type" aria-live="assertive">
               <option value="dog">Dog</option>
               <option value="cat">Cat</option>
             </select>
-          <label class="labels" for="age"><b>Age:</b></label>
+          <label id="labels" for="age"><b>Age:</b></label>
             <select aria-live="assertive" id="age">
               <option value="Baby">Baby</option>
               <option value="Young">Young</option>
               <option value="Adult">Adult</option>
               <option value="Senior">Senior</option>
             </select>
-          <label class="labels" for="B-or-S"><b>Size:</b></label>
+          <label id="labels" for="B-or-S"><b>Size:</b></label>
             <select aria-live="assertive" id="B-or-S">
               <option value="S">Small</option>
               <option value="M">Medium</option>
               <option value="L">Large</option>
               <option value="XL">Extra-Large</option>
             </select>
-          <label class="labels" for="M-or-F"><b>Sex:</b></label>
+          <label id="labels" for="M-or-F"><b>Sex:</b></label>
             <select aria-live="assertive" id="M-or-F">
               <option value="M">Male</option>
               <option value="F">Female</option>
             </select>
             <br>
-          <label class="labels" for="js-query"><b>Search City Here:</b></label>
+          <label id="labels" for="js-query"><b>Search City Here:</b></label>
             <input type="text" id="js-query" class="controls" name="search" aria-label="search-here" placeholder="Enter city here">
               <button id="search-button" type="submit">Find Animals</button>
               <br>
@@ -110,13 +110,13 @@ function displayAnimalData (eachPet) {
     eachPetAddress += eachPet.contact.address1.$t; 
   }
   if (eachPet.contact.city.$t) {
-    eachPetAddress += eachPet.contact.city.$t;
+    eachPetAddress += " " + eachPet.contact.city.$t;
   }
   if (eachPet.contact.state.$t) {
-    eachPetAddress += eachPet.contact.state.$t;
+    eachPetAddress += " " + eachPet.contact.state.$t;
   }
   if (eachPet.contact.zip.$t) {
-    eachPetAddress += eachPet.contact.zip.$t;
+    eachPetAddress += " " + eachPet.contact.zip.$t;
   }
   geocoder.geocode({'address': eachPetAddress}, function(results, status) 
     {
@@ -131,7 +131,7 @@ function displayAnimalData (eachPet) {
             alert('Geocode was not successful for the following reason: ' + status);
     }
     let infoWindowString = `<div id="popup-box">
-    <h1 id="first-heading">${eachPet.name.$t.replace(/"/g, ' ')}</h1>`;
+    <h1 id="first-heading">${eachPet.name.$t.replace(/-/g, ' ')}</h1>`;
     if (eachPet.media.photos) {
       infoWindowString += `<img id="animal-pics" src="${eachPet.media.photos.photo[2].$t}" alt="picture of the adoptable animal"/>`;
     }
@@ -142,8 +142,8 @@ function displayAnimalData (eachPet) {
     google.maps.event.addListener(marker, 'click', function() {
           infoWindow.open(map, marker)
        });      
-    $('#next-page').on("click", '#' + eachPet.name.$t.replace(/`/g, ' '), function() {
-          infoWindow.open(map, marker);
+    $('#next-page').on("click", '#' + eachPet.name.$t.replace(/ /g, ''), function() {
+                infoWindow.open(map, marker);
         }); 
     });
 
@@ -151,15 +151,15 @@ function displayAnimalData (eachPet) {
       let initialString1 = `
      <div id="animal-results">
       <hr>
-      <h3 id=${eachPet.name.$t.replace(/`/g, ' ')}>${eachPet.name.$t.replace(/`/g, ' ')}</h3>`;
+      <h3 id=${eachPet.name.$t.replace(/ /g, '')}>${eachPet.name.$t}</h3>`;
       if (eachPet.media.photos.photo[2].$t) {
         initialString1 += `<img id="animal-pics" src="${eachPet.media.photos.photo[2].$t}" alt="picture of the adoptable animal"/>`;
       }
       if (eachPet.description.$t) {
-      initialString1 += `<p>${eachPet.description.$t}</p>`;
+      initialString1 += `<p class="description">${eachPet.description.$t}</p>`;
       }
       if (eachPetAddress) {
-      initialString1 += `<p>${eachPetAddress}</p>`;
+      initialString1 += `<p id="theAddresses">${eachPetAddress}</p>`;
       }
       initialString1 += `</div>`;
       return initialString1;
@@ -169,9 +169,9 @@ function displayAnimalData (eachPet) {
       let initialString2 = `
       <div id="animal-results">
       <hr>
-      <h3 id=${eachPet.name.$t.replace(/`/g, ' ')}>${eachPet.name.$t.replace(/`/g, ' ')}</h3>`;
+      <h3 id=${eachPet.name.$t.replace(/ /g, '')}>${eachPet.name.$t}</h3>`;
       if (eachPet.description.$t) {
-        initialString2 += `<p>${eachPet.description.$t}</p>`;
+        initialString2 += `<p class="description">${eachPet.description.$t}</p>`;
       }
       if (eachPetAddress) {
         initialString2 += `<p>${eachPetAddress}</p>`;
